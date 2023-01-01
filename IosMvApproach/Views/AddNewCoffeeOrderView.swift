@@ -86,7 +86,7 @@ struct AddNewCoffeeOrderView: View {
                     }
                 }
                 .toolbar {
-                    ToolbarItem(placement: .confirmationAction) {
+                    ToolbarItem(placement: .navigationBarTrailing) {
                         Button("Done") {
                             Task {
                                 if state.isValid() {
@@ -94,6 +94,8 @@ struct AddNewCoffeeOrderView: View {
                                 }
                             }
                         }
+                        .opacity(state.isValid() ? 1: 0.5)
+                        .foregroundColor(state.isValid() ? .accentColor : .gray)
                     }
                 }
             }

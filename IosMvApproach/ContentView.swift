@@ -49,10 +49,10 @@ struct ContentView: View {
                 })
             }
             .onDelete { indexSet in
-                model.deleteItem(position: indexSet)
+              
             }
             .onMove { indexSet, offset in
-                model.moveItem(from: indexSet, to: offset)
+               
             }
         }.task {
             // asychronous code to be performed before the view appears
